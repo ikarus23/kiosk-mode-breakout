@@ -1,0 +1,5 @@
+ID 1532:007b Flipper:Razer
+REM Do nothing, just emulate a Razer device
+REM 007b = RC30-0305 Gaming Mouse Dongle [Viper Ultimate (Wireless)]
+REM 0083 = RC30-0315, Gaming Mouse [Basilisk X HyperSpeed]
+REM 0084 = RZ01-0321 Gaming Mouse [DeathAdder V2]

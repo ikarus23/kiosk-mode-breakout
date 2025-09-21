@@ -1,0 +1,3 @@
+ID 046d:c247 Flipper:Logitech
+REM Do nothing, just emulate a Logitech device
+REM c247 =  G100S Optical Gaming Mouse

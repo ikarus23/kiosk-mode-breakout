@@ -1,0 +1,2 @@
+ID 1038:1610 Flipper:SteelSeries
+REM Do nothing, just emulate a SteelSeries device
