@@ -152,9 +152,14 @@ Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) c
 If the device has a keyboard the chances increase to find a successful way to break out of the kiosk mode
 environment. However, keyboards come in many different forms as some terminals only provide on screen keyboards (OSK)
 with a subset of keys - sometimes even depending on the input field context. In other situations you might be able
-to plug in your own keyboard via USB or connect one via Bluetooth. Remember, **it is very likely that a lot of
-keyboard shortcuts have been disabled** by the kiosk mode environment. Also, not all shortcuts work on all
-Windows versions or Linux distributions. Regardless, hopefully some of the following tips might help.
+to plug in your own keyboard via USB or connect one via Bluetooth. Remember, it is very likely that **a lot of
+keyboard shortcuts have been disabled** by the kiosk mode environment. Furthermore, there might be really sneaky
+things like **stateful or custom keyboard shortcuts**. This means that you might encounter situations in which you
+have to first press one secret shortcut to then enable other shortcuts. And sometimes these shortcuts can be very
+unintuitive -- e.g. pressing the "2" and "9" key together. Also, keep in mind that not all shortcuts work on all
+Windows versions or Linux distributions.
+
+Hopefully some of the following tips might help.
 
 Windows:
 * **Ctrl+Alt+Del or Ctrl+Shift+Esc or Win+X**: These shortcuts will give you access to the Windows Taskmanager
