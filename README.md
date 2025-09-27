@@ -398,6 +398,8 @@ its on section here. Most tips & ticks for Android are brought to you by
   vulnerability/exploit regarding that software, if yes apply it in your engagement.
 * Try attaching a USB keyboard. Some keys or shortcut might help you break out. A list of keys and shortcuts
   can be found over at [appt.org](https://appt.org/en/docs/android/features/keyboard-access) (may vary on devices).
+* Try to open as many activities (windows) as you can. Having too many of them open might cause a crash that
+  breaks you out (only on older Android versions).
 
 
 
