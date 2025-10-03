@@ -100,9 +100,11 @@ Some things to look out:
   abused to e.g. run any other program. You can simply write `cmd` in the path field. The open and save dialog
   also often have a help button, which opens a browser by default. You can also go into the properties of the
   dialog which has a link into the Windows control panel.
-* **Links**: Some application contain links. They are very common in help dialogs. By default, Windows opens
-  links with a browser. From there it is easy to open an explorer (e.g. downloads -> show download folder)
-  to start other processes.
+* **Links**: Some application contain links. They are very common in help/about dialogs and privacy or legal pages.
+  By default, Windows opens links with a browser. From there it is easy to open an explorer
+  (e.g. downloads -> show download folder) to start other processes. But other things can be likely done though
+  links as well. You might even directly access the Windows settings or open an app on an Android system.
+  Even more ideas can be found in the URI handler section of the ["Other"](#other) chapter.
 * **Embedded elements**: Applications typically use some embedded elements. An example would be to render a
   HTML site with an browser-like embedded element. Some of these elements offer quite a lot of additional features.
   An embedded browser element might have a "view source" or "print site" option in the context menu. Both
@@ -400,6 +402,11 @@ its on section here. Most tips & ticks for Android are brought to you by
   can be found over at [appt.org](https://appt.org/en/docs/android/features/keyboard-access) (may vary on devices).
 * Try to open as many activities (windows) as you can. Having too many of them open might cause a crash that
   breaks you out (only on older Android versions).
+* Look out for links again. On Android links can be used to open apps. If they are not installed, Android might
+  even open the Google Play store which lets you install them. One scenario could be: you can access a web site.
+  Form there you find links to e.g. facebook, instagram, etc. They in turn let you access the google search. You
+  then switch to picture search, click on the camera icon, and Google Lense will open, or even better, the Google Play
+  store.
 
 
 
