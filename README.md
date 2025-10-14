@@ -378,6 +378,10 @@ authentication.
 
 * Attach a USB Wi-Fi dongle and check if you can connect to your own network. You can then scan the system itself,
   try to intercept the network traffic or copy files from/to your own system.
+* Try to enable the Windows [mobile hotspot](https://support.microsoft.com/en-us/windows/use-your-windows-device-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85)
+  feature via the quick settings or the settings menu ([directlink](ms-settings:network-mobilehotspot?activationSource=SMC-IA-4027762)).
+  You can then access the internal network where the Kiosk system is connected to. This can also be done if the
+  network uses Network Access Control (NAC) and you can't connect your own system.
 
 
 ### Android
