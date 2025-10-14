@@ -334,6 +334,8 @@ full system, an automatic reboot lets you explore attacks vectors from the
   Sometimes this even bypasses network configurations and firewalls, as the new interface might be unmanaged.
   This does not lead directly to a way to break out of a kiosk environment. But any exposed service on the
   network might help. See also the [Network section](#network-ethernetwi-fi) for more ideas.
+* **USB Bluetooth Dongle**: If the device has no built-in Bluetooth support, you might get this via a USB dongle
+  (and then use it to connect a keyboard or transfer data).
 * **Mouse as keyboard**: Some systems have filter rules for USB devices. Most simple systems are based on the vendor
   and product ID (VID, PID) of the device. If the two 2 byte values of a whitelisted device are known, they can be
   easily spoofed. Tools like a [Flipper Zero](https://flipperzero.one/) or a [Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky)
@@ -370,6 +372,8 @@ system. However, there is no general tips and tricks here, as this highly depend
 Just do a port scan and work from there. Maybe you find e.g. a network share with very lax permissions and no
 authentication.
 
+* Attach a USB Wi-Fi dongle and check if you can connect to your own network. You can then scan the system itself,
+  try to intercept the network traffic or copy files from/to your own system.
 
 
 ### Android
