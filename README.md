@@ -358,6 +358,10 @@ full system, an automatic reboot lets you explore attacks vectors from the
   you to chose what to do when an MTP device gets connected - e.g. opening an explorer window allowing you to break out.
   If the explorer process is not running, there might be no auto play functionality. Also, some behavior depends on
   the Windows version.
+* **External USB SSDs**: External USB SSDs can sometimes also be used to bypass some USB filter rules, because they are
+  USB Attached SCSI (UAS) devices and not mass storage devices.
+* **External DVD Drives**: External USB DVD drives can sometimes also be used to bypass some USB filter rules, because
+  they are yet another device class.
 * **Second screen**: Plugging in a second screen can help with breaking out of kiosk mode environments. If there
   no e.g. HDMI port, try attaching a USB-to-HDMI adapter. On the second screen, where the main application is likely
   not running, the input might be filtered different or not at all. Sometimes it is enough to plug in a mouse,
