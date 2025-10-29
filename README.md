@@ -195,6 +195,10 @@ Windows:
   key option might actually help, as it allows you to control the mouse cursor using the numpad.
 * **Shift+Alt+Print**: Shows the "High Contrast" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program.
+* **Hold NumLock for 5sec**: Shows the "Toggle Keys" dialog. The dialog has a link which will
+  open the system settings from where you can launch any other program.
+* **Hold right shift for 12sec**: Shows the "Filter Keys" dialog. The dialog has a link which will
+  open the system settings from where you can launch any other program.
 * **More interesting keyboard shortcuts**: Some versions of Windows allow to disable certain keys and shortcuts
   via registry keys. The functionality is handled by the MsKeyboardFilter and the registry keys can be found
   at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\KeyboardFilter`. A full list of filters/shortcuts can be
