@@ -199,6 +199,17 @@ Windows:
   open the system settings from where you can launch any other program.
 * **Hold right shift for 12sec**: Shows the "Filter Keys" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program.
+* **Ctrl+Win+Alt+Shift+W/T/Y/O/P/D/L/X/N**:
+  Open typical windows programs. If they are not installed, it may open a browser with the web application version of the service/program.
+  * W: Word
+  * T: Teams
+  * Y: Yammer
+  * O: Outlook
+  * P: PowerPoint
+  * D: OneDrive
+  * L: LinkedIn
+  * X: Excel
+  * N: OneNote
 * **More interesting keyboard shortcuts**: Some versions of Windows allow to disable certain keys and shortcuts
   via registry keys. The functionality is handled by the MsKeyboardFilter and the registry keys can be found
   at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\KeyboardFilter`. A full list of filters/shortcuts can be
