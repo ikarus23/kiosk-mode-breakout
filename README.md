@@ -104,7 +104,7 @@ Some things to look out:
   By default, Windows opens links with a browser. From there it is easy to open an explorer
   (e.g. downloads -> show download folder) to start other processes. But other things can be likely done though
   links as well. You might even directly access the Windows settings or open an app on an Android system.
-  Even more ideas can be found in the URI handler section of the ["Other"](#other) chapter.
+  Even more ideas can be found in the URI handler subsection of the [Other section](#other).
 * **Embedded elements**: Applications typically use some embedded elements. An example would be to render a
   HTML site with an browser-like embedded element. Some of these elements offer quite a lot of additional features.
   An embedded browser element might have a "view source" or "print site" option in the context menu. Both
@@ -349,8 +349,12 @@ full system, an automatic reboot lets you explore attacks vectors from the
   Sometimes this even bypasses network configurations and firewalls, as the new interface might be unmanaged.
   This does not lead directly to a way to break out of a kiosk environment. But any exposed service on the
   network might help. See also the [Network section](#network-ethernetwi-fi) for more ideas.
-* **USB Bluetooth Dongle**: If the device has no built-in Bluetooth support, you might get this via a USB dongle
-  (and then use it to connect a keyboard or transfer data).
+* **USB Bluetooth dongle**: If the device has no built-in Bluetooth support, you might get this via a USB dongle.
+  If you get lucky you might be able to connect a keyboard or transfer data.
+* **USB Wi-Fi dongle**: Attach a USB Wi-Fi dongle. You might be able to force the device into connecting to your
+  network form e.g. the lock screen or the login screen. You can then scan the system itself,
+  try to intercept the network traffic or copy files from/to your own system. Have a look at the
+  [Network section](#network-ethernetwi-fi).
 * **Mouse as keyboard**: Some systems have filter rules for USB devices. Most simple systems are based on the vendor
   and product ID (VID, PID) of the device. If the two 2 byte values of a whitelisted device are known, they can be
   easily spoofed. Tools like a [Flipper Zero](https://flipperzero.one/) or a [Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky)
@@ -373,10 +377,9 @@ full system, an automatic reboot lets you explore attacks vectors from the
   you to chose what to do when an MTP device gets connected - e.g. opening an explorer window allowing you to break out.
   If the explorer process is not running, there might be no auto play functionality. Also, some behavior depends on
   the Windows version.
-* **External USB SSDs**: External USB SSDs can sometimes also be used to bypass some USB filter rules, because they are
-  USB Attached SCSI (UAS) devices and not mass storage devices.
-* **External DVD Drives**: External USB DVD drives can sometimes also be used to bypass some USB filter rules, because
-  they are yet another device class.
+* **External CD/DVD/SSD drives**: External USB CD/DVD/SSD drives can sometimes be used to bypass some USB filter rules
+  because they might use another protocol compared to flash drives (Bulk-only transport (BOT) vs. USB
+  attached SCSI (UAS)).
 * **Second screen**: Plugging in a second screen can help with breaking out of kiosk mode environments. If there
   no e.g. HDMI port, try attaching a USB-to-HDMI adapter. On the second screen, where the main application is likely
   not running, the input might be filtered different or not at all. Sometimes it is enough to plug in a mouse,
@@ -387,16 +390,18 @@ full system, an automatic reboot lets you explore attacks vectors from the
 ### Network (Ethernet/Wi-Fi)
 
 Using access to the network interface of a device in kiosk mode, might also help in breaking out or compromising the
-system. However, there is no general tips and tricks here, as this highly depends on the available services.
+system. However, there are not a lot of general tips and tricks here, as this highly depends on the available services.
 Just do a port scan and work from there. Maybe you find e.g. a network share with very lax permissions and no
 authentication.
 
-* Attach a USB Wi-Fi dongle and check if you can connect to your own network. You can then scan the system itself,
-  try to intercept the network traffic or copy files from/to your own system.
-* Try to enable the Windows [mobile hotspot](https://support.microsoft.com/en-us/windows/use-your-windows-device-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85)
-  feature via the quick settings or the settings menu ([directlink](ms-settings:network-mobilehotspot?activationSource=SMC-IA-4027762)).
-  You can then access the internal network where the Kiosk system is connected to. This can also be done if the
-  network uses Network Access Control (NAC) and you can't connect your own system.
+* You might be able to get network access by enabling the Windows
+  [mobile hotspot](https://support.microsoft.com/en-us/windows/use-your-windows-device-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85)
+  feature via the quick settings or the settings menu ([directlink](ms-settings:network-mobilehotspot?activationSource=SMC-IA-4027762)). During boot there might be a sort time frame were you can access the quick
+  settings. If you succeed you can access the internal network where the kiosk system is connected to.
+  This might also enable you to bypass a possible Network Access Control (NAC).
+* You might be able to get network access by attaching USB Ethernet or Wi-Fi dongles.
+  See [USB section](#usb)
+
 
 
 ### Android
