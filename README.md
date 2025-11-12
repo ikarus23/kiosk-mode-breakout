@@ -396,9 +396,9 @@ authentication.
 
 * You might be able to get network access by enabling the Windows
   [mobile hotspot](https://support.microsoft.com/en-us/windows/use-your-windows-device-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85)
-  feature via the quick settings or the settings menu (<a href="ms-settings:network-mobilehotspot?activationSource=SMC-IA-4027762">direct link</a>).
-  During boot there might be a sort time frame were you can access the quick settings. If you succeed you can
-  access the internal network where the kiosk system is connected to. This might also enable you to bypass a possible Network Access Control (NAC).
+  feature via the quick settings or the settings menu. During boot there might be a sort time frame were you can
+  access the quick settings. If you succeed you can access the internal network where the kiosk system is connected to.
+  This might also enable you to bypass a possible Network Access Control (NAC).
 * You might be able to get network access by attaching USB Ethernet or Wi-Fi dongles.
   See [USB section](#usb)
 
