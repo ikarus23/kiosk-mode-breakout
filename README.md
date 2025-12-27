@@ -22,7 +22,7 @@ Some typical characteristics are:
   - [Contribute](#contribute)
   - [Breaking out](#breaking-out)
     - [Kiosk Application](#kiosk-application)
-    - [Touch Screen and Mouse](#touch-screen-and-mouse)
+    - [Touchscreen Touchpad and Mouse](#touchscreen-touchpad-and-mouse)
     - [Keyboard](#keyboard)
     - [(Re-)booting \& Login screen](#re-booting--login-screen)
     - [Crashing](#crashing)
@@ -82,7 +82,7 @@ on it a web browser window might open. The second step is to find a way from tha
 applications like the `cmd.exe`. In the example of previously opened edge browser it could be: press the three dots
 (menu) -> chose "Downloads" -> press the folder symbol (open downloads folder) -> navigate in the file browser to
 `C:\windows\system32` and double click on `osk.exe` -> then double click on `cmd.exe`. Now you have command line
-interface with a full keyboard on a device that might only have a touch screen.
+interface with a full keyboard on a device that might only have a touchscreen.
 
 Keep in mind that there can be challenges and pitfalls. Some typical examples are: finding hidden shortcuts,
 stateful behavior (e.g. keyboard shortcut works only during boot), and differences between Windows/Linux/Android/etc.
@@ -124,22 +124,25 @@ Most of the time this is used by service personal. In some cases, there is no ad
 
 
 
-### Touch Screen and Mouse
+### Touchscreen Touchpad and Mouse
 
-Most devices running a kiosk environment do have a touch screen. Sometimes, having touch input or a mouse
+Most devices running a kiosk environment do have a touchscreen. Sometimes, having touch input or a mouse
 is enough to break out. Apart from breaking out, having a keyboard is also very viable in these situations.
 Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) can be very helpful.
 
 * **Long touch/right click**: Typically opens the context menu. There you will find, depending on the context,
   more functions, which might aid in breaking out. Try this also on e.g. selected text (tripple click on
-  touch screens), it might offer more options.
-* **Drag & Drop**: Regardless of mouse or touch screen, dragging and dropping can be quite helpful to break out of
+  touchscreens), it might offer more options.
+* **Drag & Drop**: Regardless of mouse or touchscreen, dragging and dropping can be quite helpful to break out of
   kiosk environments. It typically allows for coping or executing files. A useful example would be to drag
   a file over the `cmd.exe`. This will open up a terminal, regardless of the file dragged over.
 * **Screen corners and edges**: Try moving the mouse curser to screen corners and edges. Sometimes elements
   like the Windows task bar are just hidden and will pop in, when the cursor is close by. This might also work
-  on touch screen by tapping in corners and edges.
-* **Gestures** (on Windows [source](https://support.microsoft.com/en-us/windows/touch-gestures-for-windows-a9d28305-4818-a5df-4e2b-e5590f850741)):
+  on touchscreen by tapping in corners and edges.
+* **Gestures**:
+  More modern Windows systems (and some Linux distributions) support gestures. They might work on touchscreens
+  and/or touchpads. Some gestures to look out for on Windows systems
+  ([source](https://support.microsoft.com/en-us/windows/touch-gestures-for-windows-a9d28305-4818-a5df-4e2b-e5590f850741)):
   * Show all open windows: Swipe with three fingers up on the screen.
   * Show the desktop: Swipe with three fingers down on the screen.
   * Switch to the last open app: Swipe with three fingers to the left or right on the screen.
@@ -497,7 +500,7 @@ There is some hardware and software out there which might help with breaking out
 * [Kiosk Breakout by Phrack](https://www.phrack.me/tools/2022/11/02/Kiosk-Breakout.html): Another website hosting
   a lot of links which might help to break out of a terminal running a web browser in kiosk mode.
 * USB adapters: There are situations where having a some USB adapters might help. An example would be a terminal,
-  where you can disconnect the USB wire between the touch screen and the internal terminal. This leaves you with
+  where you can disconnect the USB wire between the touchscreen and the internal terminal. This leaves you with
   probably with a Standard-B plug. If you want to connect e.g. a keyboard, you need an adapter with a Standard-B
   receptacle and a Standard-A receptacle or USB-C receptacle. Some examples of useful adapters:
   * [Standard-B receptacle to Standard-A receptacle](https://a.co/d/8O0an0I)
@@ -509,7 +512,7 @@ There is some hardware and software out there which might help with breaking out
   * [USB to Ethernet, to HDMI, to SD card reader](https://a.co/d/cUo2fpY)
 
   USB adapters that allow to plug in e.g. a flipper (USB C) if the device lets you unplug
-  a USB B cable to e.g. the touch screen. Also USB Hub
+  a USB B cable to e.g. the touchscreen. Also USB Hub
 
 
 
