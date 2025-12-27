@@ -518,6 +518,7 @@ There is some hardware and software out there which might help with breaking out
 
 ## Useful resources
 
+* [Conference talk about this collection (BalCCon 2025)](https://www.youtube.com/watch?v=tmIoT2LtQ00)
 * [Introduction to Kiosk Breakout, SecQuest](https://www.secquest.co.uk/white-papers/introduction-to-kiosk-breakout)
 * [Kiosk Escape and Jail Breakout, InternalAllTheThings, Swissky](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/escape-breakout/)
 * [Kiosk Mode / Breakout Testing, Syed M. Huda](https://wiki.smhuda.com/pentesting/application-security/mobile-security/android-application-testing/kiosk-mode-breakout-testing)
