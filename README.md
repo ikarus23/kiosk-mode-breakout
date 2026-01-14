@@ -265,10 +265,11 @@ a reboot power-off/reboot option). This might help in order to break out of the 
   for a brief period. Another common example would be a `cmd.exe` executing a script. There is a small
   time window where you might be able to e.g. right click on the window of the`cmd.exe`, go to the settings,
   and break out from there.
-* **Hard power reset**: Hard power resets might leave a damaged file system. Windows knows that and sometimes
-  offers to access the advanced boot options after automatic diagnosis. This offers interesting options like booting
-  from a different source or to enter safe mode. Choosing "Enable Safe Mode with Command Prompt" in safe mode
-  might help to perform system changes that help to escape the kiosk mode.
+* **Hard power reset**: Two hard power resets (e.g. during boot) on a Windows system typically allow access
+  to the advanced boot options on the third start, after automatic diagnosis. The dialog might also appear if the
+  file system is damaged. It offers interesting options like booting from a different source or to enter safe mode.
+  Choosing "Enable Safe Mode with Command Prompt" in safe mode might help to perform system changes that
+  help to escape the kiosk mode.
 * **Unlocked BIOS/UEFI**: Some terminals have a unlocked BIOS/UEFI. This offers interesting options like booting
   from a different source (e.g. USB flash drive), disabling secure boot, and more. If the internal storage is
   not encrypted, booting a Linux from a flash drive can be used to modify the kiosk environment and to break out.
