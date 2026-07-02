@@ -23,15 +23,16 @@ Some typical characteristics are:
   - [Breaking out](#breaking-out)
     - [Kiosk Application](#kiosk-application)
     - [Touchscreen Touchpad and Mouse](#touchscreen-touchpad-and-mouse)
+    - [Physical Buttons](#physical-buttons)
     - [Keyboard](#keyboard)
-    - [(Re-)booting \& Login screen](#re-booting--login-screen)
+    - [(Re-)booting \& Login Screen](#re-booting--login-screen)
     - [Crashing](#crashing)
     - [USB](#usb)
     - [Network (Ethernet/Wi-Fi)](#network-ethernetwi-fi)
     - [Android](#android)
     - [Other](#other)
     - [Tools](#tools)
-  - [Useful resources](#useful-resources)
+  - [Useful Resources](#useful-resources)
 
 
 
@@ -152,6 +153,30 @@ Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) c
 
 
 
+### Physical Buttons
+
+Some systems with a kiosk environment have physical buttons (not a full keyboard). Examples would be vending machines,
+ATMs or even cars. Sometimes, pressing a secret sequence or combination lead to a service or debugging menu for
+technicians. From these menus it might be possible to manipulate the device/software in a way that helps to break
+out of the kiosk mode environment.
+
+It is highly recommended to do a Internet search for the device under test. Official documentation or forum posts
+may have information on how to access secret menus. Some examples:
+* **Enter -> Clear -> Cancel -> 1 -> 2 -> 3**: This will lead to the operator menu on several ATM brands. More
+  functions might be locked behind a master password (default = 555555). Information like such can be found for
+  example in the [Genmega ATM Owner Quick Reference Guide](https://ftp.genmega.com/Manuals/QRGuide2024.pdf)
+  or on sites like [NextATM](https://www.nextatm.com/atm-ed/ATM-Ed-Resetting-ATM-Operator-Function-Passwords)
+* **Home x3 -> Up x2 -> Right -> Left -> Right -> Left -> Right**: This will open the developer settings
+  on some Roku devices (e.g. TVs, streaming stick, etc.). There are
+  [many more secret menus on Roku devices](https://www.zdnet.com/home-and-office/home-entertainment/roku-tv-secret-menus-settings/)
+  that can be found online.
+* **Menu for 3sec or Car+Menu for 6 sec**, etc.: There are hidden menus in a lot of cars. Sometimes they
+  can be entered simply by knowing the right button sequence. It is unlikely that they let you break out of
+  the kiosk environment, but they might have interesting functions that are helpful. Some well known
+  combinations can be found in the [MIB project on GitHub](https://github.com/Mr-MIBonk/M.I.B._More-Incredible-Bash/wiki/%22hidden-menus%22---key-combinations)
+
+
+
 ### Keyboard
 
 If the device has a keyboard the chances increase to find a successful way to break out of the kiosk mode
@@ -254,7 +279,7 @@ Other:
 
 
 
-### (Re-)booting & Login screen
+### (Re-)booting & Login Screen
 
 Sometimes you might find yourself in front of a kiosk terminal that you can reboot. It might be as easy as
 unplugging the power, a button inside the application or access to the Windows lock screen (which typically has
@@ -277,7 +302,8 @@ a reboot power-off/reboot option). This might help in order to break out of the 
   with public key generators. If you can bypass the BIOS/UEFI password the consequences are the same as having
   no password at all (see previous point).
 * **Shift+Restart**: You might have access to a Windows reboot button (e.g. in the login/lock screen). Pressing shift
-  while choosing the reboot option will give you access to the advanced boot options. This offers interesting options like booting from a different source or to enter safe mode. Both likely help with breaking out (see previous points).
+  while choosing the reboot option will give you access to the advanced boot options. This offers interesting options
+  like booting from a different source or to enter safe mode. Both likely help with breaking out (see previous points).
 * **Network/VPN/other settings on login screen**: The login/lock screen sometimes offers more options. A typical
   example would be to change network settings or to connect to a Wi-Fi. Depending on installed software there might
   be more options, like configuring a VPN. Maybe you find a setting that helps you to break out. Since all tools
@@ -517,7 +543,7 @@ There is some hardware and software out there which might help with breaking out
 
 
 
-## Useful resources
+## Useful Resources
 
 * [Conference talk about this collection (BalCCon 2025)](https://www.youtube.com/watch?v=tmIoT2LtQ00)
 * [Introduction to Kiosk Breakout, SecQuest](https://www.secquest.co.uk/white-papers/introduction-to-kiosk-breakout)
