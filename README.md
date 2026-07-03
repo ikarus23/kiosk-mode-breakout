@@ -160,8 +160,11 @@ ATMs or even cars. Sometimes, pressing a secret sequence or combination lead to 
 technicians. From these menus it might be possible to manipulate the device/software in a way that helps to break
 out of the kiosk mode environment.
 
-It is highly recommended to do a Internet search for the device under test. Official documentation or forum posts
-may have information on how to access secret menus. Some examples:
+> [!IMPORTANT]
+> It is highly recommended to do a Internet search for the device under test. Official documentation or forum posts
+> may have information on how to access secret menus.
+
+Some examples:
 * **Enter -> Clear -> Cancel -> 1 -> 2 -> 3**: This will lead to the operator menu on several ATM brands. More
   functions might be locked behind a master password (default = 555555). Information like such can be found for
   example in the [Genmega ATM Owner Quick Reference Guide](https://ftp.genmega.com/Manuals/QRGuide2024.pdf)
@@ -207,9 +210,23 @@ Windows:
   directly access the task bar.
 * **Win+D**: Will show the desktop. This might help to force foreground windows to be minimized. If the explorer
   is running, this should give full system access.
+* **Win+Shift+M**: Restore minimized windows.
+* **Win+B**: Set the focus to the first icon in the notification area of the taskbar. Maybe a program running in the
+  system tray on the (hidden) taskbar might help to break out.
 * **Shift+F10 or Alt+Space**: This shows the context menu of the currently focused element or window. Context menus
   sometimes have options that aid in breaking out. For example, the window context menu of the `cmd.exe` has
   a "Settings"/"Properties" entry. From there you will find options (links, "Open JSON file", etc.) to break out.
+* **Win+Ctrl+Shift+[1-9]**: Open as an administrator a new instance of the app located at the given position on
+  the taskbar.
+* **Win+U**: Open the Settings app to the Accessibility section. It is easy to break out from here. Find something
+  like a link and break out of the web browser (e.g. with the open dialog).
+* **Win+G**:Open the Game Bar. If it is not installed the Microsoft Store can be opened. From there is is possible
+  to open a browser and then access the rest of the system.
+* **Win+W**: Open Widgets. From there it's likely possible to open a browser or the Microsoft Store and break out.
+* **Win+Ctrl+Q**: Open Quick Assist. By choosing "Help someone" a login for a Microsoft account might appear.
+  Choose "Create one" -> "Privacy and cookies" -> In the browser-like window click on the Microsoft logo.
+  It will redirect to the main microsoft.com site -> Click Copilot -> Choose to upload a file -> Break out
+  of the open dialog (e.g. type "cmd" in the location bar).
 * **Shift x5**: Shows the "Sticky Keys" dialog. This is a good one! Just press the shift key five times in rapid
   succession. The dialog has a link which will open the system settings from where you can launch any other program.
   But there is more! Sometimes this dialog is deactivated. However, this typically only applies to logged in users.
@@ -248,6 +265,10 @@ Windows:
   * Win+P: Switch screens
   * Win++: Open screen magnifier
   * Ctrl+Shift+Win+B: Restart graphics driver
+
+> [!NOTE]
+> Microsoft provides a great [list with tons of keyboard shortcuts](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec).
+> It is highly recommended to check it out. There might something in there for breaking out.
 
 Linux:
 * **Ctrl+Alt+T**: On most distributions, this will open a terminal.
