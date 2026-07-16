@@ -22,7 +22,7 @@ Some typical characteristics are:
   - [Contribute](#contribute)
   - [Breaking out](#breaking-out)
     - [Kiosk Application](#kiosk-application)
-    - [Touchscreen Touchpad and Mouse](#touchscreen-touchpad-and-mouse)
+    - [Touchscreen, Touchpad and Mouse](#touchscreen-touchpad-and-mouse)
     - [Physical Buttons](#physical-buttons)
     - [Keyboard](#keyboard)
     - [(Re-)booting \& Login Screen](#re-booting--login-screen)
@@ -125,7 +125,7 @@ Most of the time this is used by service personal. In some cases, there is no ad
 
 
 
-### Touchscreen Touchpad and Mouse
+### Touchscreen, Touchpad and Mouse
 
 Most devices running a kiosk environment do have a touchscreen. Sometimes, having touch input or a mouse
 is enough to break out. Apart from breaking out, having a keyboard is also very viable in these situations.
@@ -137,7 +137,7 @@ Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) c
 * **Drag & Drop**: Regardless of mouse or touchscreen, dragging and dropping can be quite helpful to break out of
   kiosk environments. It typically allows for coping or executing files. A useful example would be to drag
   a file over the `cmd.exe`. This will open up a terminal, regardless of the file dragged over.
-* **Screen corners and edges**: Try moving the mouse curser to screen corners and edges. Sometimes elements
+* **Screen/Touchpad corners and edges**: Try moving the mouse curser to screen corners and edges. Sometimes elements
   like the Windows task bar are just hidden and will pop in, when the cursor is close by. This might also work
   on touchscreen by tapping in corners and edges.
 * **Gestures**:
@@ -150,6 +150,10 @@ Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) c
   * Open notification center: Swipe with one finger in from the right edge of the screen.
   * See widgets: Swipe with one finger in from the left edge of screen.
   * Switch desktops: Swipe with four fingers to the left or right on the screen.
+
+> [!NOTE]
+> If there is USB access, it might be helpful to connect a (second) mouse, touchpad or touchscreen. More information
+> can be found the [USB](#usb) section.
 
 
 
@@ -395,17 +399,15 @@ full system, an automatic reboot lets you explore attacks vectors from the
   which might let you break out of the kiosk environment. You can set the dirty bit from a Windows system
   with the command `fsutil dirty set F:` (see [fsutil dirty](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-dirty)).
   If the explorer process is not running, there might be no auto-repair functionality.
-* **USB to Ethernet dongles**: The network interface of terminals with a kiosk mode might sometimes be hard to reach
-  or not existent in the first place. Plugging in a USB to Ethernet adapter might broadly increase the attack surface.
-  Sometimes this even bypasses network configurations and firewalls, as the new interface might be unmanaged.
-  This does not lead directly to a way to break out of a kiosk environment. But any exposed service on the
-  network might help. See also the [Network section](#network-ethernetwi-fi) for more ideas.
-* **USB Bluetooth dongle**: If the device has no built-in Bluetooth support, you might get this via a USB dongle.
-  If you get lucky you might be able to connect a keyboard or transfer data.
-* **USB Wi-Fi dongle**: Attach a USB Wi-Fi dongle. You might be able to force the device into connecting to your
-  network form e.g. the lock screen or the login screen. You can then scan the system itself,
-  try to intercept the network traffic or copy files from/to your own system. Have a look at the
-  [Network section](#network-ethernetwi-fi).
+* **Second (touch)screen**: Plugging in a second screen can help with breaking out of kiosk mode environments. If there
+  no e.g. HDMI port, try attaching a USB-to-HDMI adapter. On the second screen, where the main application is likely
+  not running in the foreground, the input might be filtered different or not at all. Sometimes it is enough to
+  plug in a mouse, move the pointer to the second screen and right click. If the second screen is a touchscreen
+  (e.g. video + touch over USB-C), there might be additional possibilities to break out.
+* **BitLocker To Go**: BitLocker is the drive encryption solution by Microsoft. The "To Go" variant is meant for USB
+  flash drives. Plugging in a BitLocker encrypted flash drive into a Windows 7 system will show a popup to unlock
+  the device. The popup, however, has links that can be used to break out of a kiosk mode environment. Unfortunately,
+  the same dialog on Windows 10 or 11 does not have links and it might be not possible to break out.
 * **Mouse as keyboard**: Some systems have filter rules for USB devices. Most simple systems are based on the vendor
   and product ID (VID, PID) of the device. If the two 2 byte values of a whitelisted device are known, they can be
   easily spoofed. Tools like a [Flipper Zero](https://flipperzero.one/) or a [Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky)
@@ -416,10 +418,17 @@ full system, an automatic reboot lets you explore attacks vectors from the
   A simple way to achieves this is to use a [Facedancer](https://github.com/greatscottgadgets/facedancer) compatible
   device. This allows you to emulate a USB keyboard with a simple Python script. Details about the emulated device
   (e.g. the protocol) can easily be changed.
-* **BitLocker To Go** (Windows 7 only): BitLocker is the drive encryption solution by Microsoft. The "To Go" variant is meant for USB
-  flash drives. Plugging in a BitLocker encrypted flash drive into a Windows 7 system will show a popup to unlock
-  the device. The popup, however, has links that can be used to break out of a kiosk mode environment. Unfortunately,
-  the same dialog on Windows 10 or 11 does not have options to break out.
+* **USB Bluetooth dongle**: If the device has no built-in Bluetooth support, you might get this via a USB dongle.
+  If you get lucky you might be able to connect a keyboard or transfer data.
+* **USB to Ethernet dongles**: The network interface of terminals with a kiosk mode might sometimes be hard to reach
+  or not existent in the first place. Plugging in a USB to Ethernet adapter might broadly increase the attack surface.
+  Sometimes this even bypasses network configurations and firewalls, as the new interface might be unmanaged.
+  This does not lead directly to a way to break out of a kiosk environment. But any exposed service on the
+  network might help. See also the [Network section](#network-ethernetwi-fi) for more ideas.
+* **USB Wi-Fi dongle**: Attach a USB Wi-Fi dongle. You might be able to force the device into connecting to your
+  network form e.g. the lock screen or the login screen. You can then scan the system itself,
+  try to intercept the network traffic or copy files from/to your own system. Have a look at the
+  [Network section](#network-ethernetwi-fi).
 * **MTP/Mobile phone**: The Media Transfer Protocol (MTP) is most commonly used when connecting a Android phone
   with a computer using a USB cable. On modern Android versions you have to activate the file transfer manually.
   Connecting a MTP device can have two effects wich might help to break out of a kiosk mode environment.
@@ -431,10 +440,6 @@ full system, an automatic reboot lets you explore attacks vectors from the
 * **External CD/DVD/SSD drives**: External USB CD/DVD/SSD drives can sometimes be used to bypass some USB filter rules
   because they might use another protocol compared to flash drives (Bulk-only transport (BOT) vs. USB
   attached SCSI (UAS)).
-* **Second screen**: Plugging in a second screen can help with breaking out of kiosk mode environments. If there
-  no e.g. HDMI port, try attaching a USB-to-HDMI adapter. On the second screen, where the main application is likely
-  not running, the input might be filtered different or not at all. Sometimes it is enough to plug in a mouse,
-  move the pointer to the second screen and right click.
 
 
 
