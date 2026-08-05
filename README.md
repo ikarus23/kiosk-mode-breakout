@@ -202,7 +202,12 @@ Also, keep in mind that not all shortcuts work on all Windows versions or Linux 
 
 Hopefully some of the following tips might help.
 
-Windows:
+**Windows:**
+> [!NOTE]
+> A lot of keyboard shortcuts in Windows depend on the Explorer process running. Some kiosk systems do not start it.
+> If that is the case, focus more on keyboard shortcuts related to accessibility options. Also note that Windows 11
+> allows for more keyboard shortcuts to work without the Explorer process than Windows 10 does.
+
 * **Ctrl+Alt+Del or Ctrl+Shift+Esc or Win+X**: These shortcuts will give you access to the Windows Taskmanager
   from which any other process can be started.
 * **Win+R**: This shortcut will give you access to a dialog that allows you to run other programs
@@ -290,10 +295,7 @@ Windows:
 > * [Using the Office Key](https://support.microsoft.com/en-US/Office/using-the-office-key)
 > * [Remote Desktop Services Shortcut Keys](https://learn.microsoft.com/en-us/windows/win32/termserv/terminal-services-shortcut-keys)
 
-
-
-
-Linux:
+**Linux:**
 * **Ctrl+Alt+T**: On most distributions, this will open a terminal.
 * **Ctrl+Alt+F1/F2/F3/Fx**: This will typically switch between TTYs.
 * **Ctrl+Alt+Backspace**: This will kill the XServer (GUI).
@@ -304,7 +306,7 @@ Linux:
   [Arch Linux Wiki](https://wiki.archlinux.org/title/Keyboard_shortcuts#Rebooting). For more details please
   refer to [Magic SysRq key on Wikipedia](https://en.wikipedia.org/wiki/Magic_SysRq_key).
 
-Other:
+**Other:**
 * **Media/special keys**: Some keyboards provide keys for e.g. volume control, media control (play/pause/skip) or
   have dedicated keys for opening a web browser or the default mail program. These keys are sometimes overlooked
   and are therefore not blocked. From e.e. an open web browser it is easy to escape to the operating system.
