@@ -231,6 +231,7 @@ Windows:
 * **Win+G**:Open the Game Bar. If it is not installed the Microsoft Store can be opened. From there is is possible
   to open a browser and then access the rest of the system.
 * **Win+W**: Open Widgets. From there it's likely possible to open a browser or the Microsoft Store and break out.
+* **Win+K**: Open the Connect quick action. From there it is easy to access the system settings and break out.
 * **Win+Ctrl+Q**: Open Quick Assist. By choosing "Help someone" a login for a Microsoft account might appear.
   Choose "Create one" -> "Privacy and cookies" -> In the browser-like window click on the Microsoft logo.
   It will redirect to the main microsoft.com site -> Click Copilot -> Choose to upload a file -> Break out
