@@ -337,8 +337,8 @@ a reboot power-off/reboot option). This might help in order to break out of the 
 * **Hard power reset**: Two hard power resets (e.g. during boot) on a Windows system typically allow access
   to the advanced boot options on the third start, after automatic diagnosis. The dialog might also appear if the
   file system is damaged. It offers interesting options like booting from a different source or to enter safe mode.
-  Choosing "Enable Safe Mode with Command Prompt" in safe mode might help to perform system changes that
-  help to escape the kiosk mode.
+  Choosing "Enable Safe Mode with Command Prompt" might help to perform system changes that help to escape the
+  kiosk mode.
 * **Unlocked BIOS/UEFI**: Some terminals have a unlocked BIOS/UEFI. This offers interesting options like booting
   from a different source (e.g. USB flash drive), disabling secure boot, and more. If the internal storage is
   not encrypted, booting a Linux from a flash drive can be used to modify the kiosk environment and to break out.
@@ -396,6 +396,16 @@ full system, an automatic reboot lets you explore attacks vectors from the
   reboot. This offers interesting options like booting from a different source or to enter safe mode.
   Choosing "Enable Safe Mode with Command Prompt" in safe mode might help to perform system changes that help
   to escape the kiosk mode.
+
+> [!NOTE]
+> Crashing a system or performing multiple hard-resets (see #re-booting--login-screen) typically leads a Windows
+> system to giving access to the safe mode. The behavior is mainly dictated by the `bootstatuspolicy` in the
+> BCD (see [BCDEdit Options Reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcd-boot-options-reference)).
+> Having access to safe mode greatly increases the chance for breaking out. In the minimal safe boot environment,
+> for example, the Windows build-in keyboard filter is not active. Furthermore, if no local administrative user
+> is activated, Windows will activate it in safe mode. Entering safe mode is also possible without entering
+> a BitLocker recovery key. When entering safe mode with CLI (not minimal, results in a kiosk breakout),
+> the BitLocker key might be required (depending on TPM vs. no TPM installation).
 
 
 
