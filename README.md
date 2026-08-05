@@ -129,7 +129,7 @@ Most of the time this is used by service personal. In some cases, there is no ad
 
 Most devices running a kiosk environment do have a touchscreen. Sometimes, having touch input or a mouse
 is enough to break out. Apart from breaking out, having a keyboard is also very viable in these situations.
-Therefore, starting an on screen keyboard (e.g. `C:\Windows\System32\osk.exe`) can be very helpful.
+Therefore, starting an on-screen keyboard (e.g. `C:\Windows\System32\osk.exe`) can be very helpful.
 
 * **Long touch/right click**: Typically opens the context menu. There you will find, depending on the context,
   more functions, which might aid in breaking out. Try this also on e.g. selected text (tripple click on
@@ -164,7 +164,7 @@ ATMs or even cars. Sometimes, pressing a secret sequence or combination lead to 
 technicians. From these menus it might be possible to manipulate the device/software in a way that helps to break
 out of the kiosk mode environment.
 
-> [!IMPORTANT]
+> [!NOTE]
 > It is highly recommended to do a Internet search for the device under test. Official documentation or forum posts
 > may have information on how to access secret menus.
 
@@ -187,14 +187,18 @@ Some examples:
 ### Keyboard
 
 If the device has a keyboard the chances increase to find a successful way to break out of the kiosk mode
-environment. However, keyboards come in many different forms as some terminals only provide on screen keyboards (OSK)
+environment. However, keyboards come in many different forms as some terminals only provide on-screen keyboards (OSK)
 with a subset of keys - sometimes even depending on the input field context. In other situations you might be able
-to plug in your own keyboard via USB or connect one via Bluetooth. Remember, it is very likely that **a lot of
-keyboard shortcuts have been disabled** by the kiosk mode environment. Furthermore, there might be really sneaky
-things like **stateful or custom keyboard shortcuts**. This means that you might encounter situations in which you
-have to first press one secret shortcut to then enable other shortcuts. And sometimes these shortcuts can be very
-unintuitive -- e.g. pressing the "2" and "9" key together. Also, keep in mind that not all shortcuts work on all
-Windows versions or Linux distributions.
+to plug in your own keyboard via USB or connect one via Bluetooth.
+
+Remember, it is very likely that **a lot of keyboard shortcuts have been disabled** by the kiosk mode environment.
+Sometimes, keyboard filters are just programs running in the background. You might be able to sneak in a shortcut
+when the system is starting or under heavy load.
+
+Furthermore, there might be really sneaky things like **stateful or custom keyboard shortcuts**. This means that
+you might encounter situations in which you have to first press one secret shortcut to then enable other shortcuts.
+And sometimes these shortcuts can be very unintuitive -- e.g. pressing the "2" and "9" key together.
+Also, keep in mind that not all shortcuts work on all Windows versions or Linux distributions.
 
 Hopefully some of the following tips might help.
 
@@ -242,23 +246,30 @@ Windows:
 * **Shift+Alt+NumLock**: Shows the "Mouse Keys" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program. Furthermore, activating the mouse
   key option might actually help, as it allows you to control the mouse cursor using the numpad.
+* **Win++(plus sign)**: Open the screen magnifier. It has buttons/links to access the Windows settings. From there
+  it is easy to break out.
 * **Shift+Alt+Print**: Shows the "High Contrast" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program.
 * **Hold NumLock for 5sec**: Shows the "Toggle Keys" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program.
 * **Hold right shift for 12sec**: Shows the "Filter Keys" dialog. The dialog has a link which will
   open the system settings from where you can launch any other program.
-* **Ctrl+Win+Alt+Shift+W/T/Y/O/P/D/L/X/N**:
-  Open typical windows programs. If they are not installed, it may open a browser with the web application version of the service/program.
+* **"Office key"+W/T/Y/O/P/D/L/X/N**: The combination **Ctrl+Win+Alt+Shift** simulates the "Office key". It can be
+  used to open typical Windows Office programs or web applications. If a program is not installed, it may open a
+  browser with the web application version of the service/program. Pressing the Office key without any additional
+  key also opens a program of the browser.
   * W: Word
   * T: Teams
-  * Y: Yammer
-  * O: Outlook
-  * P: PowerPoint
   * D: OneDrive
   * L: LinkedIn
-  * X: Excel
-  * N: OneNote
+  * ... (for more, check the [documentation](https://support.microsoft.com/en-US/Office/using-the-office-key))
+* **"Copilot key"+C/S/I/L**: The combination **Win+C** or **Left-Shift+Win+F23** can be used to simulate the
+  "Copilot key". Pressing the Copilot key without any additional key opens the Copilot application.
+  If Copilot isn't available, it will open the settings so you can choose what the key does.
+  * C: Start a quick chat with Copilot
+  * S: Summarize highlighted text instantly
+  * I: Get insights from what’s on screen
+  * L: Launch a task list in seconds
 * **More interesting keyboard shortcuts**: Some versions of Windows allow to disable certain keys and shortcuts
   via registry keys. The functionality is handled by the MsKeyboardFilter and the registry keys can be found
   at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\KeyboardFilter`. A full list of filters/shortcuts can be
@@ -267,12 +278,19 @@ Windows:
 * **Miscellaneous**: These shortcuts might help in some situations, but are not directly linked to a quick
   kiosk mode breakout:
   * Win+P: Switch screens
-  * Win++: Open screen magnifier
   * Ctrl+Shift+Win+B: Restart graphics driver
 
 > [!NOTE]
-> Microsoft provides a great [list with tons of keyboard shortcuts](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec).
-> It is highly recommended to check it out. There might something in there for breaking out.
+> Microsoft provides great lists for keyboard shortcuts. It is highly recommended to check them out. There might
+> something in there for breaking out.
+> * [Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
+> * [Windows keyboard shortcuts for accessibility](https://support.microsoft.com/en-US/accessibility/windows/windows-keyboard-shortcuts-for-accessibility)
+> * [Game Bar shortcuts](https://support.xbox.com/en-US/help/games-apps/game-setup-and-play/customize-game-bar-on-windows-10)
+> * [Using the Office Key](https://support.microsoft.com/en-US/Office/using-the-office-key)
+> * [Remote Desktop Services Shortcut Keys](https://learn.microsoft.com/en-us/windows/win32/termserv/terminal-services-shortcut-keys)
+
+
+
 
 Linux:
 * **Ctrl+Alt+T**: On most distributions, this will open a terminal.
@@ -314,7 +332,8 @@ a reboot power-off/reboot option). This might help in order to break out of the 
   and you will see some other open windows during system start. Sometimes you can even access the Windows taskbar
   for a brief period. Another common example would be a `cmd.exe` executing a script. There is a small
   time window where you might be able to e.g. right click on the window of the`cmd.exe`, go to the settings,
-  and break out from there.
+  and break out from there. Also, most keyboard filters are just programs running in the background.
+  You might be able to sneak in a shortcut when the system is starting or under heavy load.
 * **Hard power reset**: Two hard power resets (e.g. during boot) on a Windows system typically allow access
   to the advanced boot options on the third start, after automatic diagnosis. The dialog might also appear if the
   file system is damaged. It offers interesting options like booting from a different source or to enter safe mode.
