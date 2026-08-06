@@ -401,9 +401,10 @@ full system, an automatic reboot lets you explore attacks vectors from the
   to escape the kiosk mode.
 
 > [!NOTE]
-> Crashing a system or performing multiple hard-resets (see #re-booting--login-screen) typically leads a Windows
-> system to giving access to the safe mode. The behavior is mainly dictated by the `bootstatuspolicy` in the
-> BCD (see [BCDEdit Options Reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcd-boot-options-reference)).
+> Crashing a system or performing multiple hard-resets (see [(Re-)booting & Login Screen](#re-booting--login-screen))
+> typically leads a Windows system to giving access to the safe mode. The behavior is mainly dictated by the
+> `bootstatuspolicy` in the BCD (see
+> [BCDEdit Options Reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcd-boot-options-reference)).
 > Having access to safe mode greatly increases the chance for breaking out. In the minimal safe boot environment,
 > for example, the Windows build-in keyboard filter is not active. Furthermore, if no local administrative user
 > is activated, Windows will activate it in safe mode. Entering safe mode is also possible without entering
