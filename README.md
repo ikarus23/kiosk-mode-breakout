@@ -263,7 +263,7 @@ Hopefully some of the following tips might help.
 * **"Office key"+W/T/Y/O/P/D/L/X/N**: The combination **Ctrl+Win+Alt+Shift** simulates the "Office key". It can be
   used to open typical Windows Office programs or web applications. If a program is not installed, it may open a
   browser with the web application version of the service/program. Pressing the Office key without any additional
-  key also opens a program of the browser.
+  key also opens a program or the browser.
   * W: Word
   * T: Teams
   * D: OneDrive
